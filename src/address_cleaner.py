@@ -29,8 +29,12 @@ def address_cleaner(text):
         error_lst.append(text)
         return text
 
-## Usage Example
-# devoid_ad_lst = devoid_col(pandas_column.values)
+## Usage Example using file located at: data/error_addressess.txt
+# text_file = open("../data/error_addressess.txt", "r")
+# ad_lst = text_file.readlines()
+# #trimming /n html code
+# ad_lst = [ad[:-1] for ad in ad_lst]
+# devoid_ad_lst = devoid_col(ad_lst)
 # cleaned_list = [address_cleaner(address_string) for address_string in devoid_ad_lst]
 ##List of errors and number or errors, usually due to no digits in address line (expect ~6%)
 # print((error_lst))
